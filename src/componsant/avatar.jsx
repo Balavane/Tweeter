@@ -1,5 +1,6 @@
-export function Avatar() {
- return <div class = "avatar">
-    <img src="/assets/ProfileSettings.png" alt="" class ="avatar img"/>
- </div>
+import ProfileSettings from "../assets/Profile-Photo.png"
+
+
+export default function Avatar (){
+    return <div className="avatar"><img src={ProfileSettings} alt="" className="avatar img"/></div>
 }

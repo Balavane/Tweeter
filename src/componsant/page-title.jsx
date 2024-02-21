@@ -1,4 +1,4 @@
 export  function Title (){
-    return <h1 >Home</h1>
+    return <h1 className="page-title " >Home</h1>
     
 }

@@ -1,14 +1,17 @@
-import { Header } from "./componsant/header";
-import { TweetEdit } from "./componsant/tweet-editor";
+import {Header} from "./componsant/header"
+
+
+import TweetEdit from "./componsant/tweetsEdit"
 
 
 
 export default function Timeline() {
-  
-  return <div class = "timeline">
-    <TweetEdit/>
-    <Header/>
-  </div>
-   
+  return <div className="timeline">
+    
+    <Header />
+    
+    <TweetEdit />
+    
+    </div>
   
 }
