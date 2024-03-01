@@ -1,7 +1,17 @@
 import Tweets from './tweet.jsx'
 
+
+
+
+
+
+
+
 export default function Tweet (){
-    return <div className="tweet">
+    return <>
+    <div >
         <Tweets />
-    </div>
+        </div>
+        
+        </>
 }
