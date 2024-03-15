@@ -12,6 +12,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .timeline {
@@ -195,7 +196,7 @@ body{
     gap: 20px;
 }
 .sideBar{
-    width: 100px;
+    width: 35%;
     margin-left: 5%;
 }
 .incon{
