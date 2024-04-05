@@ -1,20 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Timeline from './Timeline.jsx';
-import './App.css';
-import SideBar from './sideBar.jsx';
-import { BrowserRouter ,Routes, Route} from 'react-router-dom';
-import Profil_Act from './composantSider/profil_Act.jsx';
-import AppGlobal from './AppGlobal';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Profile from "./pages/Profile.jsx";
+import Timeline from "./pages/Timeline.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <Timeline /> },
+      { path: "/:userName", element: <Profile /> },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  <BrowserRouter>
-      <Routes>
-        <Route path='/' element = {<AppGlobal/>} />
-      <Route path='/profil' element = {<Profil_Act/>} />
-  </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
-  
-)
+);

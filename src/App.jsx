@@ -1,18 +1,27 @@
-import {Header} from "./componsant/header"
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Sidebar from "./Components/Sidebar";
+import Trends from "./Components/Trends";
+import { TweetContext } from "./contexts/tweets";
+import json from "./data/initial-data.json";
 
-import Tweet from './componsant/tweets.jsx'
-import TweetEdit from "./componsant/tweetsEdit"
-
-
-
-
-export default function Timeline() {
-  return <div className="timeline">
-    
-    <Header />
-    <TweetEdit />
-    <Tweet />
-   
-    </div>
-  
+function App() {
+  const data = { ...json };
+  return (
+    <>
+      <TweetContext.Provider value={data}>
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+        <div className="timeline">
+          <Outlet />
+        </div>
+        <div className="trends">
+          <Trends />
+        </div>
+      </TweetContext.Provider>
+    </>
+  );
 }
+
+export default App;
