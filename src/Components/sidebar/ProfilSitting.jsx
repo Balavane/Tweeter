@@ -11,7 +11,7 @@ export default function ProfilSitting() {
         <img src={profil} alt="" />
         <div>
           <p className="flex justify-center">
-            Daniel Balavne
+            Daniel Balavane
             <img src={privacy} alt="" />
           </p>
           <span className="text-[gray] font-thin">@bradley_</span>
